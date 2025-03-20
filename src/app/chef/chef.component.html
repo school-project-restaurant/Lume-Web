@@ -1,1 +1,38 @@
-<p>chef works!</p>
+<div class="chef-container">
+    <h1>Gestione Ordini</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Numero Tavolo</th>
+                <th>Piatti</th>
+                <th>Stato</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ordine of ordini">
+                <td>{{ ordine.tavolo }}</td>
+                <td>{{ ordine.piatti.join(', ') }}</td>
+                <td>
+                    <span [class.pronto]="ordine.pronto" [class.in-preparazione]="!ordine.pronto">
+                        {{ ordine.pronto ? 'Pronto' : 'In Preparazione' }}
+                    </span>
+                </td>
+                <td>
+                    <button class="btn" (click)="completaOrdine(ordine)">
+                        {{ ordine.pronto ? 'Servito' : 'Completa' }}
+                    </button>
+                    <button class="btn-delete" (click)="rimuoviOrdine(ordine)">Rimuovi</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Aggiungi Nuovo Ordine</h2>
+    <form (submit)="aggiungiOrdine()">
+        <input type="number" [(ngModel)]="nuovoTavolo" placeholder="Numero Tavolo" min="1" required>
+        <input type="text" [(ngModel)]="nuoviPiatti" placeholder="Piatti (separati da virgola)" required>
+        <button type="submit" class="btn">Aggiungi</button>
+    </form>
+</div>

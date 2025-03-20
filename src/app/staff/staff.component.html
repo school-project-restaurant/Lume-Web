@@ -1,1 +1,38 @@
-<p>staff works!</p>
+<div class="staff-container">
+    <h1>Gestione Staff</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Ruolo</th>
+                <th>Stato</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let membro of staff">
+                <td>{{ membro.nome }}</td>
+                <td>{{ membro.ruolo }}</td>
+                <td>
+                    <span [class.attivo]="membro.attivo" [class.disattivo]="!membro.attivo">
+                        {{ membro.attivo ? 'Attivo' : 'Non Attivo' }}
+                    </span>
+                </td>
+                <td>
+                    <button (click)="toggleStato(membro)" class="btn">
+                        {{ membro.attivo ? 'Disattiva' : 'Attiva' }}
+                    </button>
+                    <button (click)="rimuoviMembro(membro)" class="btn-delete">Rimuovi</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Aggiungi Nuovo Membro</h2>
+    <form (submit)="aggiungiMembro()">
+        <input type="text" [(ngModel)]="nuovoNome" placeholder="Nome" required>
+        <input type="text" [(ngModel)]="nuovoRuolo" placeholder="Ruolo" required>
+        <button type="submit" class="btn">Aggiungi</button>
+    </form>
+</div>

@@ -1,1 +1,23 @@
-<p>reservations works!</p>
+<div class="reservations-container">
+    <h1>Prenota il tuo Tavolo</h1>
+    <form (submit)="prenota()">
+        <label for="orario">Orario</label>
+        <input type="time" id="orario" [(ngModel)]="orario" required>
+
+        <label for="persone">Numero di Persone</label>
+        <input type="number" id="persone" [(ngModel)]="persone" min="1" required>
+
+        <label for="note">Note Aggiuntive</label>
+        <textarea id="note" [(ngModel)]="note"></textarea>
+
+        <button type="submit" class="btn">Prenota</button>
+    </form>
+
+    <h2>Le tue prenotazioni</h2>
+    <ul>
+        <li *ngFor="let prenotazione of prenotazioni">
+            <span>{{ prenotazione.data }} - {{ prenotazione.persone }} Persone</span>
+            <button class="btn-cancel" (click)="cancellaPrenotazione(prenotazione)">Annulla</button>
+        </li>
+    </ul>
+</div>
