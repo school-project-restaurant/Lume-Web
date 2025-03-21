@@ -1,8 +1,14 @@
-// Importiamo i font se richiesto
+// Import dei font
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap')
 
+$primary-color: #d4af37
+$text-color: #222
+$bg-light: #f8f8f8
+$gray: #cccccc
+
+// Hero Section
 .hero
-  background: #cccccc  // Sfondo grigio
+  background: $gray  // TEMPORANEO, sostituire con immagine
   height: 80vh
   display: flex
   align-items: center
@@ -10,48 +16,105 @@
   text-align: center
   color: white
 
-
   .hero-content
     max-width: 600px
 
     h1
-      font-size: 3rem
-      margin-bottom: 10px
+      font-size: 4rem
+      font-weight: 600
 
-    p
+    h2
+      font-size: 2rem
+      margin-bottom: 10px
+      text-transform: uppercase
+
+    .intro-text
       font-size: 1.2rem
+      font-style: italic
       margin-bottom: 20px
 
-    .btn
+    .btn-primary
       display: inline-block
-      background-color: #d4af37
+      background-color: $primary-color
       color: white
       padding: 12px 24px
       text-decoration: none
       font-size: 1rem
       border-radius: 5px
 
-.about, .locations
+// Navbar
+.main-nav
+  background-color: white
+  padding: 15px
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1)
+
+  ul
+    list-style: none
+    display: flex
+    justify-content: center
+    gap: 30px
+
+    li
+      a
+        text-decoration: none
+        color: $text-color
+        font-weight: bold
+        font-size: 1.2rem
+
+// About & Experience Section
+.about, .experience
   text-align: center
   padding: 60px 20px
+  background: $bg-light
 
   h2
     font-size: 2rem
     margin-bottom: 10px
 
-.city-container
-  display: flex
-  justify-content: center
-  gap: 20px
-
-  .city
-  width: 200px
-  height: 150px
-  background-color: #e0e0e0  // Grigio chiaro
-  display: flex
-  align-items: center
-  justify-content: center
+// Menu Preview
+.menu-preview
   text-align: center
-  font-size: 1.2rem
-  font-weight: bold
+  padding: 50px 20px
 
+  h2
+    font-size: 2rem
+    margin-bottom: 10px
+
+  .menu-grid
+    display: flex
+    justify-content: center
+    gap: 20px
+
+    .menu-item
+      width: 200px
+      height: 150px
+      background-color: $gray  // Temporaneo, sarà immagine piatto
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      font-size: 1.2rem
+      font-weight: bold
+      border-radius: 10px
+
+// Location Section
+.locations
+  text-align: center
+  padding: 50px 20px
+
+  .city-container
+    display: flex
+    justify-content: center
+    gap: 20px
+
+    .city
+      width: 200px
+      height: 150px
+      background-color: $gray  // Temporaneo, sarà un'immagine
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      font-size: 1.2rem
+      font-weight: bold
+      border-radius: 10px
