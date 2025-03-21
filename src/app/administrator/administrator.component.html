@@ -1,1 +1,35 @@
-<p>administrator works!</p>
+<div class="admin-container">
+    <h1>Gestione Utenti</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Ruolo</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let utente of utenti">
+                <td>{{ utente.nome }}</td>
+                <td>
+                    <select [(ngModel)]="utente.ruolo">
+                        <option *ngFor="let ruolo of ruoliDisponibili" [value]="ruolo">{{ ruolo }}</option>
+                    </select>
+                </td>
+                <td>
+                    <button class="btn-delete" (click)="rimuoviUtente(utente)">Rimuovi</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Aggiungi Nuovo Utente</h2>
+    <form (submit)="aggiungiUtente()">
+        <input type="text" [(ngModel)]="nuovoNome" placeholder="Nome" required>
+        <select [(ngModel)]="nuovoRuolo">
+            <option *ngFor="let ruolo of ruoliDisponibili" [value]="ruolo">{{ ruolo }}</option>
+        </select>
+        <button type="submit" class="btn">Aggiungi</button>
+    </form>
+</div>

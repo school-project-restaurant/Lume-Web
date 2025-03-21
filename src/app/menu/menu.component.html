@@ -1,1 +1,17 @@
-<p>menu works!</p>
+<div class="menu-container">
+    <h1>Il Nostro Menù</h1>
+
+    <div class="menu-category" *ngFor="let categoria of menu">
+        <h2>{{ categoria.nome }}</h2>
+        <div class="menu-items">
+            <div class="menu-item" *ngFor="let piatto of categoria.piatti">
+                <img src="{{ piatto.img }}" alt="{{ piatto.nome }}">
+                <div class="menu-info">
+                    <h3>{{ piatto.nome }}</h3>
+                    <p>{{ piatto.ingredienti }}</p>
+                    <span class="prezzo">{{ piatto.prezzo | currency:'EUR' }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
