@@ -1,38 +1,43 @@
-<div class="staff-container">
-    <h1>Gestione Staff</h1>
+<div class="container">
+    <h1>Prenotazioni:</h1>
+    <div class="prenotazioni">
+        <div class="card" *ngFor="let prenotazione of prenotazioni">
+            <h3>{{ prenotazione.nome }}</h3>
+            <p>{{ prenotazione.data }} - {{ prenotazione.orario }}</p>
+            <p><strong>Tavolo:</strong> {{ prenotazione.tavolo }}</p>
+            <p><strong>Persone:</strong> {{ prenotazione.persone }}</p>
+            <p><strong>Telefono:</strong> {{ prenotazione.telefono }}</p>
+            <button (click)="prendiPrenotazione(prenotazione)">Prendi Tavolo</button>
+        </div>
+    </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Ruolo</th>
-                <th>Stato</th>
-                <th>Azioni</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let membro of staff">
-                <td>{{ membro.nome }}</td>
-                <td>{{ membro.ruolo }}</td>
-                <td>
-                    <span [class.attivo]="membro.attivo" [class.disattivo]="!membro.attivo">
-                        {{ membro.attivo ? 'Attivo' : 'Non Attivo' }}
-                    </span>
-                </td>
-                <td>
-                    <button (click)="toggleStato(membro)" class="btn">
-                        {{ membro.attivo ? 'Disattiva' : 'Attiva' }}
-                    </button>
-                    <button (click)="rimuoviMembro(membro)" class="btn-delete">Rimuovi</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <h2>Aggiungi Prenotazione</h2>
+    <form (submit)="aggiungiPrenotazione()">
+        <input type="text" [(ngModel)]="nuovaPrenotazione.nome" name="nome" placeholder="Nome">
+        <input type="text" id="data" [(ngModel)]="nuovaPrenotazione.data" name="data" placeholder="YYYY-MM-DD"
+            pattern="\d{4}-\d{2}-\d{2}" required>
 
-    <h2>Aggiungi Nuovo Membro</h2>
-    <form (submit)="aggiungiMembro()">
-        <input type="text" [(ngModel)]="nuovoNome" placeholder="Nome" required>
-        <input type="text" [(ngModel)]="nuovoRuolo" placeholder="Ruolo" required>
-        <button type="submit" class="btn">Aggiungi</button>
+        <input type="time" [(ngModel)]="nuovaPrenotazione.orario" name="orario">
+        <input type="number" [(ngModel)]="nuovaPrenotazione.tavolo" name="tavolo" placeholder="Numero Tavolo">
+        <input type="number" [(ngModel)]="nuovaPrenotazione.persone" name="persone" placeholder="Numero Persone">
+        <input type="text" [(ngModel)]="nuovaPrenotazione.telefono" name="telefono" placeholder="Telefono">
+        <button (click)="aggiungiPrenotazione()">Aggiungi Prenotazione</button>
     </form>
+
+    <h1>I tuoi Tavoli</h1>
+    <div class="tavoli">
+        <div class="tavolo" *ngFor="let tavolo of tavoliAssegnati">
+            <h3>Tavolo {{ tavolo.tavolo }}</h3>
+            <p><strong>Cliente:</strong> {{ tavolo.nome }}</p>
+            <p><strong>Persone:</strong> {{ tavolo.persone }}</p>
+            <p><strong>Orario:</strong> {{ tavolo.orario }}</p>
+
+            <h4>Ordini</h4>
+            <ul>
+                <li *ngFor="let ordine of tavolo.ordini">{{ ordine }}</li>
+            </ul>
+            <input type="text" #nuovoOrdine placeholder="Aggiungi un ordine">
+            <button (click)="aggiungiOrdine(tavolo, nuovoOrdine.value)">Aggiungi</button>
+        </div>
+    </div>
 </div>
