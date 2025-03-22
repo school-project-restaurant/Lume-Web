@@ -1,1 +1,12 @@
-<p>primi-piatti works!</p>
+<section class="menu-intro">
+    <h2>Primi Piatti</h2>
+    <p>Tutti i nostri primi piatti tradizionali e creativi</p>
+</section>
+
+<div class="dish-list">
+    <div class="dish-card" *ngFor="let dish of primi">
+        <h4>{{ dish.name }}</h4>
+        <p class="ingredients">{{ dish.ingredients }}</p>
+        <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p>
+    </div>
+</div>

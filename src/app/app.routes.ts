@@ -22,11 +22,11 @@ export const routes: Routes = [
     },
     {
         path: 'menu/primi-piatti',
-        loadComponent: () => import('./menu/primi-piatti/primi-piatti.component').then(m => m.PrimiPiattiComponent)
+        loadComponent: () => import('./menu/primi-piatti/primi-piatti.component').then(m => m.PrimiComponent)
     },
     {
         path: 'menu/secondi-piatti',
-        loadComponent: () => import('./menu/secondi-piatti/secondi-piatti.component').then(m => m.SecondiPiattiComponent)
+        loadComponent: () => import('./menu/secondi-piatti/secondi-piatti.component').then(m => m.SecondiComponent)
     },
     {
         path: 'menu/dessert',

@@ -1,1 +1,12 @@
-<p>secondi-piatti works!</p>
+<section class="menu-intro">
+    <h2>Secondi Piatti</h2>
+    <p>Tutti i nostri secondi piatti tradizionali e creativi</p>
+</section>
+
+<div class="dish-list">
+    <div class="dish-card" *ngFor="let dish of secondi">
+        <h4>{{ dish.name }}</h4>
+        <p class="ingredients">{{ dish.ingredients }}</p>
+        <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p>
+    </div>
+</div>

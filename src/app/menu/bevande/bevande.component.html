@@ -1,1 +1,12 @@
-<p>bevande works!</p>
+<section class="menu-intro">
+    <h2>Bevande</h2>
+    <p>Tutte le nostre Bevande tradizionali e creativi</p>
+</section>
+
+<div class="dish-list">
+    <div class="dish-card" *ngFor="let dish of bevande">
+        <h4>{{ dish.name }}</h4>
+        <p class="ingredients">{{ dish.ingredients }}</p>
+        <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p>
+    </div>
+</div>
