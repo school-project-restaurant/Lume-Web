@@ -16,11 +16,12 @@ interface Dish {
 })
 export class AntipastiComponent {
   antipasti: Dish[] = [
-    { name: 'Bruschetta', ingredients: 'Pane, pomodoro, basilico', price: 6.50 },
-    { name: 'Carpaccio', ingredients: 'Manzo, rucola, parmigiano', price: 10.00 },
-    { name: 'Caprese', ingredients: 'Mozzarella, pomodoro, basilico', price: 8.00 },
-    { name: 'Frittelle di zucchine', ingredients: 'Zucchine, uova, farina', price: 7.00 },
-    { name: 'Arancini', ingredients: 'Riso, ragù, piselli', price: 6.00 },
-    { name: 'Involtini di melanzane', ingredients: 'Melanzane, ricotta, pomodoro', price: 9.00 }
+    { name: 'Aura Marina', ingredients: 'Ostriche con spuma di mare e perle di caviali', price: 70.00 },
+    { name: 'Brezza di Bosco', ingredients: 'Tartare di funghi con germogli selvatici e crumble di nocciole', price: 60.00 },
+    { name: 'Eco Agromato', ingredients: 'Carpaccio di pesce spada con salsa di zafferano e petali di fiori', price: 80.00 },
+    { name: 'Idillio Estivo', ingredients: 'Insalata di melone e prosciutto con sfere di mozzarella e menta', price: 55.00 },
+    { name: 'Miraggio di Zucca', ingredients: 'Vellutata di zucca con amaretti e olio al rosmarino', price: 65.00 },
+    { name: 'Abisso di radici', ingredients: 'Carciofi alla giuda con riduzione di aceto balsamico e pecorino', price: 75.00 },
+    { name: 'Crepuscolo di Agrumi', ingredients: 'Insalata di arance e finocchi con olive taggiasche e mandorle', price: 68.00 }
   ];
 }

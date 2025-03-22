@@ -25,9 +25,9 @@ export class MenuComponent {
     {
       name: 'Antipasti',
       dishes: [
-        { name: 'Bruschetta', ingredients: 'Pane, pomodoro, basilico', price: 6.50 },
-        { name: 'Carpaccio', ingredients: 'Manzo, rucola, parmigiano', price: 10.00 },
-        { name: 'Caprese', ingredients: 'Mozzarella, pomodoro, basilico', price: 8.00 }
+        { name: 'Eco Agromato', ingredients: 'Carpaccio di pesce spada con salsa di zafferano e petali di fiori', price: 80.00 },
+        { name: 'Idillio Estivo', ingredients: 'Insalata di melone e prosciutto con sfere di mozzarella e menta', price: 55.00 },
+        { name: 'Miraggio di Zucca', ingredients: 'Vellutata di zucca con amaretti e olio al rosmarino', price: 65.00 }
       ]
     },
     {
@@ -57,9 +57,9 @@ export class MenuComponent {
     {
       name: 'Bevande',
       dishes: [
-        { name: 'Acqua', ingredients: 'Naturale o frizzante', price: 2.00 },
-        { name: 'Vino', ingredients: 'Bianco o rosso', price: 4.00 },
-        { name: 'Caffè', ingredients: 'Espresso o macchiato', price: 1.50 }
+        { name: 'Sorgente di cristallo', ingredients: 'Acqua naturale liscia', price: 12 },
+        { name: 'Nettare d Oro di atlantide', ingredients: 'Bottiglia di vino bianco con spezie rare, fiori esotici e leggero sentore salmastro', price: 390 },
+        { name: 'Scintille di Topazio', ingredients: 'Bibita frizzante con aromi di frutti rossi', price: 15.50 },
       ]
     }
   ];
