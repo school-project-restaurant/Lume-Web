@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 interface Dish {
   name: string;
@@ -15,7 +16,7 @@ interface MenuCategory {
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.sass']
 })
@@ -62,4 +63,15 @@ export class MenuComponent {
       ]
     }
   ];
+
+  getRouteForCategory(category: string): string {
+    switch (category) {
+      case 'Antipasti': return '/menu/antipasti';
+      case 'Primi piatti': return '/menu/primi-piatti';
+      case 'Secondi piatti': return '/menu/secondi-piatti';
+      case 'Dessert': return '/menu/dessert';
+      case 'Bevande': return '/menu/bevande';
+      default: return '/menu';
+    }
+  }
 }

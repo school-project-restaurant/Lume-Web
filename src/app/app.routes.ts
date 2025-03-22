@@ -16,5 +16,26 @@ export const routes: Routes = [
     { path: 'chef', component: ChefComponent },
     { path: 'reservations', component: ReservationsComponent },
     { path: 'menu', component: MenuComponent },
-    { path: '**', redirectTo: '/home' } // Reindirizza a Home per rotte inesistenti
+    {
+        path: 'menu/antipasti',
+        loadComponent: () => import('./menu/antipasti/antipasti.component').then(m => m.AntipastiComponent)
+    },
+    {
+        path: 'menu/primi-piatti',
+        loadComponent: () => import('./menu/primi-piatti/primi-piatti.component').then(m => m.PrimiPiattiComponent)
+    },
+    {
+        path: 'menu/secondi-piatti',
+        loadComponent: () => import('./menu/secondi-piatti/secondi-piatti.component').then(m => m.SecondiPiattiComponent)
+    },
+    {
+        path: 'menu/dessert',
+        loadComponent: () => import('./menu/dessert/dessert.component').then(m => m.DessertComponent)
+    },
+    {
+        path: 'menu/bevande',
+        loadComponent: () => import('./menu/bevande/bevande.component').then(m => m.BevandeComponent)
+    },
+    { path: '**', redirectTo: '/home' }, // SEMPRE PER ULTIMA -> Reindirizza a Home per rotte inesistenti
 ];
+
