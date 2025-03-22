@@ -1,6 +1,17 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+interface Dish {
+  name: string;
+  ingredients: string;
+  price: number;
+}
+
+interface MenuCategory {
+  name: string;
+  dishes: Dish[];
+}
+
 @Component({
   selector: 'app-menu',
   standalone: true,
@@ -9,7 +20,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./menu.component.sass']
 })
 export class MenuComponent {
-  menuCategories = [
+  menuCategories: MenuCategory[] = [
     {
       name: 'Antipasti',
       dishes: [
@@ -52,4 +63,3 @@ export class MenuComponent {
     }
   ];
 }
-

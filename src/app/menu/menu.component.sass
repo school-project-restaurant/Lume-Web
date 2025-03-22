@@ -1,3 +1,6 @@
+body
+  background-color: #f9f9f9
+
 .menu-intro
   text-align: center
   margin: 2rem 0
@@ -26,25 +29,37 @@
 
 .dish-card
   flex: 1 1 calc(30% - 1rem)
-  padding: 1rem
-  background: #fff
-  border-radius: 12px
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1)
-  transition: transform 0.3s
+  padding: 1.5rem
+  background-color: #ffffff
+  border-radius: 20px
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05)
+  transition: transform 0.3s ease-in-out
 
   h4
     margin-bottom: 0.3rem
+    font-size: 1.1rem
+    font-weight: 600
+    letter-spacing: 0.5px
 
   .ingredients
-    font-size: 0.9rem
-    color: #666
+    font-size: 0.95rem
+    color: #555
 
   .price
     font-weight: bold
-    margin-top: 0.5rem
+    margin-top: 0.8rem
+    font-size: 1rem
 
 .see-more
-  display: inline-block
+  display: block
+  text-align: right
   margin-top: 0.5rem
+  color: #a445ed
   font-weight: 600
-  color: #007BFF
+
+@media (max-width: 768px)
+  .dish-list
+    flex-direction: column
+
+  .dish-card
+    flex: 1 1 100%
