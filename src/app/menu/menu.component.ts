@@ -9,36 +9,47 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./menu.component.sass']
 })
 export class MenuComponent {
-  menu = [
+  menuCategories = [
     {
-      nome: 'Antipasti', piatti: [
-        { nome: 'Bruschetta', ingredienti: 'Pomodoro, basilico, aglio', prezzo: 5.99, img: '' },
-        { nome: 'Carpaccio di manzo', ingredienti: 'Manzo, rucola, grana', prezzo: 9.99, img: '' }
+      name: 'Antipasti',
+      dishes: [
+        { name: 'Bruschetta', ingredients: 'Pane, pomodoro, basilico', price: 6.50 },
+        { name: 'Carpaccio', ingredients: 'Manzo, rucola, parmigiano', price: 10.00 },
+        { name: 'Caprese', ingredients: 'Mozzarella, pomodoro, basilico', price: 8.00 }
       ]
     },
     {
-      nome: 'Primi Piatti', piatti: [
-        { nome: 'Tagliatelle al ragù', ingredienti: 'Pasta fresca, ragù di carne', prezzo: 12.99, img: '' },
-        { nome: 'Risotto ai funghi', ingredienti: 'Riso, funghi porcini', prezzo: 14.50, img: '' }
+      name: 'Primi piatti',
+      dishes: [
+        { name: 'Tagliatelle al Ragù', ingredients: 'Tagliatelle, ragù', price: 12.50 },
+        { name: 'Risotto ai Funghi', ingredients: 'Riso, funghi, parmigiano', price: 14.00 },
+        { name: 'Lasagna', ingredients: 'Pasta, ragù, besciamella, parmigiano', price: 13.00 }
       ]
     },
     {
-      nome: 'Secondi Piatti', piatti: [
-        { nome: 'Bistecca alla griglia', ingredienti: 'Carne di manzo, spezie', prezzo: 18.99, img: '' },
-        { nome: 'Filetto di salmone', ingredienti: 'Salmone fresco, limone', prezzo: 16.50, img: '' }
+      name: 'Secondi piatti',
+      dishes: [
+        { name: 'Bistecca alla Fiorentina', ingredients: 'Bistecca, sale, pepe', price: 25.00 },
+        { name: 'Pollo alla Cacciatora', ingredients: 'Pollo, pomodoro, olive', price: 18.00 },
+        { name: 'Salmone al Forno', ingredients: 'Salmone, limone, prezzemolo', price: 20.00 }
       ]
     },
     {
-      nome: 'Contorni', piatti: [
-        { nome: 'Patate al forno', ingredienti: 'Patate, rosmarino', prezzo: 4.99, img: '' },
-        { nome: 'Verdure grigliate', ingredienti: 'Zucchine, melanzane, peperoni', prezzo: 5.50, img: '' }
+      name: 'Dessert',
+      dishes: [
+        { name: 'Tiramisù', ingredients: 'Savoiardi, mascarpone, caffè', price: 6.00 },
+        { name: 'Panna Cotta', ingredients: 'Panna, zucchero, vaniglia', price: 5.50 },
+        { name: 'Cantucci con Vin Santo', ingredients: 'Cantucci, vin santo', price: 7.00 }
       ]
     },
     {
-      nome: 'Dolci', piatti: [
-        { nome: 'Tiramisù', ingredienti: 'Mascarpone, caffè, cacao', prezzo: 6.99, img: '' },
-        { nome: 'Panna cotta', ingredienti: 'Panna, vaniglia, caramello', prezzo: 5.99, img: '' }
+      name: 'Bevande',
+      dishes: [
+        { name: 'Acqua', ingredients: 'Naturale o frizzante', price: 2.00 },
+        { name: 'Vino', ingredients: 'Bianco o rosso', price: 4.00 },
+        { name: 'Caffè', ingredients: 'Espresso o macchiato', price: 1.50 }
       ]
     }
   ];
 }
+
