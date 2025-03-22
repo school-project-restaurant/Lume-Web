@@ -1,44 +1,77 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
+interface Dish {
+  name: string;
+  ingredients: string;
+  price: number;
+}
+
+interface MenuCategory {
+  name: string;
+  dishes: Dish[];
+}
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.sass']
 })
 export class MenuComponent {
-  menu = [
+  menuCategories: MenuCategory[] = [
     {
-      nome: 'Antipasti', piatti: [
-        { nome: 'Bruschetta', ingredienti: 'Pomodoro, basilico, aglio', prezzo: 5.99, img: '' },
-        { nome: 'Carpaccio di manzo', ingredienti: 'Manzo, rucola, grana', prezzo: 9.99, img: '' }
+      name: 'Antipasti',
+      dishes: [
+        { name: 'Eco Agromato', ingredients: 'Carpaccio di pesce spada con salsa di zafferano e petali di fiori', price: 80.00 },
+        { name: 'Idillio Estivo', ingredients: 'Insalata di melone e prosciutto con sfere di mozzarella e menta', price: 55.00 },
+        { name: 'Miraggio di Zucca', ingredients: 'Vellutata di zucca con amaretti e olio al rosmarino', price: 65.00 }
       ]
     },
     {
-      nome: 'Primi Piatti', piatti: [
-        { nome: 'Tagliatelle al ragù', ingredienti: 'Pasta fresca, ragù di carne', prezzo: 12.99, img: '' },
-        { nome: 'Risotto ai funghi', ingredienti: 'Riso, funghi porcini', prezzo: 14.50, img: '' }
+      name: 'Primi piatti',
+      dishes: [
+        { name: 'Tagliatelle al Ragù', ingredients: 'Tagliatelle, ragù', price: 12.50 },
+        { name: 'Risotto ai Funghi', ingredients: 'Riso, funghi, parmigiano', price: 14.00 },
+        { name: 'Lasagna', ingredients: 'Pasta, ragù, besciamella, parmigiano', price: 13.00 }
       ]
     },
     {
-      nome: 'Secondi Piatti', piatti: [
-        { nome: 'Bistecca alla griglia', ingredienti: 'Carne di manzo, spezie', prezzo: 18.99, img: '' },
-        { nome: 'Filetto di salmone', ingredienti: 'Salmone fresco, limone', prezzo: 16.50, img: '' }
+      name: 'Secondi piatti',
+      dishes: [
+        { name: 'Bistecca alla Fiorentina', ingredients: 'Bistecca, sale, pepe', price: 25.00 },
+        { name: 'Pollo alla Cacciatora', ingredients: 'Pollo, pomodoro, olive', price: 18.00 },
+        { name: 'Salmone al Forno', ingredients: 'Salmone, limone, prezzemolo', price: 20.00 }
       ]
     },
     {
-      nome: 'Contorni', piatti: [
-        { nome: 'Patate al forno', ingredienti: 'Patate, rosmarino', prezzo: 4.99, img: '' },
-        { nome: 'Verdure grigliate', ingredienti: 'Zucchine, melanzane, peperoni', prezzo: 5.50, img: '' }
+      name: 'Dessert',
+      dishes: [
+        { name: 'Tiramisù', ingredients: 'Savoiardi, mascarpone, caffè', price: 6.00 },
+        { name: 'Panna Cotta', ingredients: 'Panna, zucchero, vaniglia', price: 5.50 },
+        { name: 'Cantucci con Vin Santo', ingredients: 'Cantucci, vin santo', price: 7.00 }
       ]
     },
     {
-      nome: 'Dolci', piatti: [
-        { nome: 'Tiramisù', ingredienti: 'Mascarpone, caffè, cacao', prezzo: 6.99, img: '' },
-        { nome: 'Panna cotta', ingredienti: 'Panna, vaniglia, caramello', prezzo: 5.99, img: '' }
+      name: 'Bevande',
+      dishes: [
+        { name: 'Sorgente di cristallo', ingredients: 'Acqua naturale liscia', price: 12 },
+        { name: 'Nettare d Oro di atlantide', ingredients: 'Bottiglia di vino bianco con spezie rare, fiori esotici e leggero sentore salmastro', price: 390 },
+        { name: 'Scintille di Topazio', ingredients: 'Bibita frizzante con aromi di frutti rossi', price: 15.50 },
       ]
     }
   ];
+
+  getRouteForCategory(category: string): string {
+    switch (category) {
+      case 'Antipasti': return '/menu/antipasti';
+      case 'Primi piatti': return '/menu/primi-piatti';
+      case 'Secondi piatti': return '/menu/secondi-piatti';
+      case 'Dessert': return '/menu/dessert';
+      case 'Bevande': return '/menu/bevande';
+      default: return '/menu';
+    }
+  }
 }

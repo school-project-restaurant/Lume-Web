@@ -1,0 +1,12 @@
+<section class="menu-intro">
+    <h2>Dessert</h2>
+    <p>Tutti i nostri Dessert tradizionali e creativi</p>
+</section>
+
+<div class="dish-list">
+    <div class="dish-card" *ngFor="let dish of dessert">
+        <h4>{{ dish.name }}</h4>
+        <p class="ingredients">{{ dish.ingredients }}</p>
+        <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p>
+    </div>
+</div>

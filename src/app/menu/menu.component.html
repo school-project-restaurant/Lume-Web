@@ -1,17 +1,16 @@
-<div class="menu-container">
-    <h1>Il Nostro Menù</h1>
+<section class="menu-intro">
+    <h2>Scopri i nostri piatti</h2>
+    <p>Piatti autentici preparati con ingredienti freschi e selezionati</p>
+</section>
 
-    <div class="menu-category" *ngFor="let categoria of menu">
-        <h2>{{ categoria.nome }}</h2>
-        <div class="menu-items">
-            <div class="menu-item" *ngFor="let piatto of categoria.piatti">
-                <img src="{{ piatto.img }}" alt="{{ piatto.nome }}">
-                <div class="menu-info">
-                    <h3>{{ piatto.nome }}</h3>
-                    <p>{{ piatto.ingredienti }}</p>
-                    <span class="prezzo">{{ piatto.prezzo | currency:'EUR' }}</span>
-                </div>
-            </div>
+<section *ngFor="let category of menuCategories" class="category">
+    <h3>{{ category.name }}</h3>
+    <div class="dish-list">
+        <div class="dish-card" *ngFor="let dish of category.dishes">
+            <h4>{{ dish.name }}</h4>
+            <p class="ingredients">{{ dish.ingredients }}</p>
+            <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p>
         </div>
     </div>
-</div>
+    <a [routerLink]="getRouteForCategory(category.name)" class="see-more">Altro</a>
+</section>
