@@ -23,35 +23,35 @@ interface MenuCategory {
 export class MenuComponent {
   menuCategories: MenuCategory[] = [
     {
-      name: 'Antipasti',
+      name: 'Antipasti & Contorni',
       dishes: [
         { name: 'Eco Agromato', ingredients: 'Carpaccio di pesce spada con salsa di zafferano e petali di fiori', price: 80.00 },
-        { name: 'Idillio Estivo', ingredients: 'Insalata di melone e prosciutto con sfere di mozzarella e menta', price: 55.00 },
+        { name: 'Idillio di Foglie', ingredients: 'Insalata mista con dressing allo yogurt e semi di chia', price: 45.00 },
         { name: 'Miraggio di Zucca', ingredients: 'Vellutata di zucca con amaretti e olio al rosmarino', price: 65.00 }
       ]
     },
     {
       name: 'Primi piatti',
       dishes: [
-        { name: 'Tagliatelle al Ragù', ingredients: 'Tagliatelle, ragù', price: 12.50 },
-        { name: 'Risotto ai Funghi', ingredients: 'Riso, funghi, parmigiano', price: 14.00 },
-        { name: 'Lasagna', ingredients: 'Pasta, ragù, besciamella, parmigiano', price: 13.00 }
+        { name: 'Assioma di Terra', ingredients: 'Ravioli ripieni di ricotta e spinaci con burro fuso e salvia', price: 80 },
+        { name: 'Corollario di Orto', ingredients: 'Lasagne vegetariane con verdure di stagione e besciamella leggera', price: 75 },
+        { name: 'Dicotomia di Spezie', ingredients: 'Couscous con verdure e spezie orientali, servito con yogurt greco', price: 82 }
       ]
     },
     {
       name: 'Secondi piatti',
       dishes: [
-        { name: 'Bistecca alla Fiorentina', ingredients: 'Bistecca, sale, pepe', price: 25.00 },
-        { name: 'Pollo alla Cacciatora', ingredients: 'Pollo, pomodoro, olive', price: 18.00 },
-        { name: 'Salmone al Forno', ingredients: 'Salmone, limone, prezzemolo', price: 20.00 }
+        { name: 'Fulgore di Bosco', ingredients: 'Anatra all\'arancia con purè di sedano rapa e riduzione al Grand Marnier', price: 125.00 },
+        { name: 'Orizzonte di Gusto', ingredients: 'Costolette di agnello con salsa alla menta e cous cous speziato', price: 140.00 },
+        { name: 'Essenza Mediterranea', ingredients: 'Spiedini di pesce spada con pomodorini e salsa alle erbe', price: 118.00 }
       ]
     },
     {
       name: 'Dessert',
       dishes: [
-        { name: 'Tiramisù', ingredients: 'Savoiardi, mascarpone, caffè', price: 6.00 },
-        { name: 'Panna Cotta', ingredients: 'Panna, zucchero, vaniglia', price: 5.50 },
-        { name: 'Cantucci con Vin Santo', ingredients: 'Cantucci, vin santo', price: 7.00 }
+        { name: 'Orizzonte di Dolcezza', ingredients: 'Panna cotta con salsa ai frutti di bosco e crumble croccante', price: 52.00 },
+        { name: 'Zefiro di Caffè', ingredients: 'Tiramisù al caffè con scaglie di cioccolato e crema al mascarpone', price: 58.00 },
+        { name: 'Nebbia di Lamponi', ingredients: 'Semifreddo ai lamponi con coulis di frutti rossi e granella di pistacchi', price: 53.00 },
       ]
     },
     {
