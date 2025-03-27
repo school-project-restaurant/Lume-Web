@@ -1,0 +1,24 @@
+<section class="menu-intro">
+    <h2>Antipasti</h2>
+    <p>Tutti i nostri antipasti e contorni tradizionali e creativi</p>
+</section>
+
+<div class="dish-list">
+    <div class="dish-card" *ngFor="let dish of antipasti">
+        <h4>{{ dish.name }}</h4>
+        <p class="ingredients">{{ dish.ingredients }}</p>
+        <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p>
+    </div>
+</div>
+
+<section class="menu-intro">
+    <h2>Contorni</h2>
+</section>
+
+<div class="dish-list">
+    <div class="dish-card" *ngFor="let dish of contorni">
+        <h4>{{ dish.name }}</h4>
+        <p class="ingredients">{{ dish.ingredients }}</p>
+        <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p>
+    </div>
+</div>
