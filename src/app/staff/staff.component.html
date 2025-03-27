@@ -13,8 +13,9 @@
 
     <h2>Aggiungi Prenotazione</h2>
     <form (submit)="aggiungiPrenotazione()">
-        <input type="text" [(ngModel)]="nuovaPrenotazione.nome" name="nome" placeholder="Nome">
-        <input type="text" id="data" [(ngModel)]="nuovaPrenotazione.data" name="data" placeholder="YYYY-MM-DD"
+        <input type="text" [(ngModel)]="nuovaPrenotazione.nome" name="nome" required placeholder="Nome" />
+
+        <input type=" text" id="data" [(ngModel)]="nuovaPrenotazione.data" name="data" placeholder="YYYY-MM-DD"
             pattern="\d{4}-\d{2}-\d{2}" required>
 
         <input type="time" [(ngModel)]="nuovaPrenotazione.orario" name="orario">

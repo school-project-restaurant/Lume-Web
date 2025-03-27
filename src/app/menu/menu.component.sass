@@ -1,56 +1,65 @@
-.menu-container
+body
+  background-color: #f9f9f9
+
+.menu-intro
   text-align: center
-  padding: 2rem
-  background: #1c1c1c
-  color: white
-
-  h1
-    font-size: 2.5rem
-    margin-bottom: 2rem
-
-.menu-category
-  margin-bottom: 3rem
+  margin: 2rem 0
 
   h2
     font-size: 2rem
-    margin-bottom: 1rem
-    border-bottom: 2px solid #ff5733
-    display: inline-block
-    padding-bottom: 5px
-
-.menu-items
-  display: flex
-  flex-wrap: wrap
-  justify-content: center
-  gap: 2rem
-
-.menu-item
-  background: rgba(255, 255, 255, 0.1)
-  padding: 1rem
-  border-radius: 10px
-  width: 250px
-  text-align: center
-  transition: transform 0.3s
-
-  &:hover
-    transform: scale(1.05)
-
-  img
-    width: 100%
-    border-radius: 10px
-
-.menu-info
-  margin-top: 1rem
-
-  h3
-    font-size: 1.4rem
-    margin-bottom: 5px
+    font-weight: bold
+    margin-bottom: 0.5rem
 
   p
-    font-size: 1rem
-    color: #ccc
+    font-size: 1.1rem
+    color: #555
 
-  .prezzo
-    font-size: 1.2rem
+.category
+  margin: 2rem 0
+
+  h3
+    font-size: 1.5rem
+    margin-bottom: 1rem
+    color: #333
+
+.dish-list
+  display: flex
+  flex-wrap: wrap
+  gap: 1.5rem
+
+.dish-card
+  flex: 1 1 calc(30% - 1rem)
+  padding: 1.5rem
+  background-color: #ffffff
+  border-radius: 20px
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05)
+  transition: transform 0.3s ease-in-out
+
+  h4
+    margin-bottom: 0.3rem
+    font-size: 1.1rem
+    font-weight: 600
+    letter-spacing: 0.5px
+
+  .ingredients
+    font-size: 0.95rem
+    color: #555
+
+  .price
     font-weight: bold
-    color: #ff5733
+    margin-top: 0.8rem
+    font-size: 1rem
+
+.see-more
+  display: block
+  text-align: right
+  margin-top: 0.5rem
+  color: #a445ed
+  font-weight: 600
+
+@media (max-width: 768px)
+  .dish-list
+    flex-direction: column
+
+  .dish-card
+    flex: 1 1 100%

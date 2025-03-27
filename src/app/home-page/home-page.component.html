@@ -1,27 +1,54 @@
 <header class="hero">
-    <div class="box">
-        <h1>Benvenuti al Ristorante Lume</h1>
-        <p>Un'esperienza culinaria luminosa, dove semplicità e qualità si incontrano.</p>
-        <a routerLink="/menu" class="btn">Scopri il Menu</a>
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="assets/Home-page-Vid.mp4" type="video/mp4">
+        Il tuo browser non supporta il video HTML5.
+    </video>
+
+    <div class="hero-content">
+        <h1>Lume</h1>
+        <p class="intro-text">
+            "Il tempo si sospende, mentre la luce danza sui cristalli e i sapori si fondono in un'armonia perfetta.
+            Un'orchestra silenziosa di gesti eleganti vi accompagna in un'esperienza sensoriale unica, benvenuti
+            al Ristorante Lume."
+        </p>
+        <a href="#" class="btn btn-primary">Prenota un Tavolo</a>
     </div>
 </header>
 
-
 <section class="about">
-    <h2>La nostra filosofia</h2>
-    <p>Nel cuore della nostra cucina ci sono ingredienti freschi, tecniche innovative e una passione senza tempo.</p>
+    <h2>Il nostro credo</h2>
+    <p>
+        La nostra cucina è un atto di creazione, un'espressione dell'invisibile.
+        Ogni piatto è un'opera d'arte, un'ode alla bellezza e all'armonia.
+        Materie prime d'eccellenza e tecniche all'avanguardia si fondono in
+        un'esperienza che sfida le convenzioni e apre nuove prospettive.
+    </p>
 </section>
 
-<section class="gallery">
-    <h2>Le nostre specialità</h2>
-    <div class="grid">
-        <img src="assets/img/piatto1.jpg" alt="Piatto 1">
-        <img src="assets/img/piatto2.jpg" alt="Piatto 2">
-        <img src="assets/img/piatto3.jpg" alt="Piatto 3">
+<section class="experience">
+    <h2>Un'Esperienza Unica</h2>
+    <p>
+        Le sale del Ristorante Lume sono teatro di un'esperienza culinaria unica,
+        esaltata da un design raffinato e un servizio impeccabile.
+        Ogni dettaglio è curato con meticolosa attenzione, per offrire un'esperienza sensoriale
+        indimenticabile.
+    </p>
+</section>
+
+<section class="menu-preview">
+    <h2>I nostri piatti</h2>
+    <div class="menu-grid">
+        <div class="menu-item">Nome Piatto</div>
+        <div class="menu-item">Nome Piatto</div>
+        <div class="menu-item">Nome Piatto</div>
     </div>
 </section>
 
-<section class="cta">
-    <h2>Prenota il tuo tavolo</h2>
-    <a routerLink="/reservations" class="btn">Prenota ora</a>
+<section class="locations">
+    <h2>Dove trovarci</h2>
+    <div class="city-container">
+        <div class="city">Bolzano</div>
+        <div class="city">Monopoli</div>
+    </div>
 </section>
+<app-footer></app-footer>
