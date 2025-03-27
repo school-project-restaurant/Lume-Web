@@ -35,20 +35,12 @@
     </p>
 </section>
 
-<section class="menu-preview">
+<div class="menu-preview">
     <h2>I nostri piatti</h2>
-    <div class="menu-grid">
-        <div class="menu-item">Nome Piatto</div>
-        <div class="menu-item">Nome Piatto</div>
-        <div class="menu-item">Nome Piatto</div>
+    <div class="menu-grid" *ngFor="let preview of menu">
+        <img class="menu-item" [src]="preview.image" alt="Antipasto">
+        <p>{{ preview.name }}</p>
     </div>
-</section>
+</div>
 
-<section class="locations">
-    <h2>Dove trovarci</h2>
-    <div class="city-container">
-        <div class="city">Bolzano</div>
-        <div class="city">Monopoli</div>
-    </div>
-</section>
 <app-footer></app-footer>
