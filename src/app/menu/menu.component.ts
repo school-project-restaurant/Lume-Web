@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import {ClientFooterComponent} from "../shared/client-footer/client-footer.component";
 
 interface Dish {
   name: string;
@@ -16,14 +17,14 @@ interface MenuCategory {
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+    imports: [CommonModule, RouterModule, ClientFooterComponent],
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.sass']
 })
 export class MenuComponent {
   menuCategories: MenuCategory[] = [
     {
-      name: 'Antipasti & Contorni',
+      name: 'Antipasti',
       dishes: [
         { name: 'Eco Agromato', ingredients: 'Carpaccio di pesce spada con salsa di zafferano e petali di fiori', price: 80.00 },
         { name: 'Idillio di Foglie', ingredients: 'Insalata mista con dressing allo yogurt e semi di chia', price: 45.00 },
