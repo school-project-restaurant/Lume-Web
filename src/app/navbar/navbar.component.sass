@@ -1,26 +1,25 @@
 nav
-  background-color: #222 // Colore di sfondo
-  padding: 10px 20px
+  background-color: white
   display: flex
   justify-content: space-between
   align-items: center
+  margin: 12px
 
-  .nav-links
-    list-style: none
+  li
     display: flex
-    gap: 20px
+    align-items: center
 
-    li
-      display: inline
-      
-      a
-        text-decoration: none
-        color: #fff // ⬅️ Testo visibile su sfondo scuro
-        font-size: 18px
-        transition: color 0.3s ease-in-out
+  a
+    text-decoration: none
+    background-color: white
+    color: black
+    font-size: 20px
 
-        &:hover
-          color: #ff6b6b // ⬅️ Colore evidenziato quando passi sopra
+  .nav-a
+    transition: color 0.3s ease-in-out
+    &:hover
+      color: #d4af37
+      transform: scale(1.10)
 
   .logo
     font-size: 24px
@@ -29,12 +28,29 @@ nav
 
   .login-btn
     .btn
-      background-color: #ff6b6b
-      color: #fff
-      padding: 8px 16px
-      border-radius: 5px
-      text-decoration: none
-      transition: background 0.3s
+      color: white
+      background: transparent
+    padding: 5px 10px
+    border-radius: 10px
+    font-size: 16px
+    font-weight: 500
+    line-height: 24px
+    word-wrap: break-word
+    background-color: black
+    &:hover
+      background-color: #d4af37
+      color: black
 
-      &:hover
-        background-color: #e63946
+.nav-links
+  color: black
+  font-size: 20px
+  font-weight: 500
+  line-height: 30px
+  width: 100%
+  word-wrap: break-word
+  gap: 20px
+  list-style: none
+  margin: 0
+  padding: 0
+  display: flex
+  justify-content: center
