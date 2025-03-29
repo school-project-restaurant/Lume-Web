@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {ClientFooterComponent} from "../../shared/client-footer/client-footer.component";
 
 interface Dish {
   name: string;
@@ -10,7 +11,7 @@ interface Dish {
 @Component({
   selector: 'app-secondi-piatti',
   standalone: true,
-  imports: [CommonModule],
+    imports: [CommonModule, ClientFooterComponent],
   templateUrl: './secondi-piatti.component.html',
   styleUrls: ['./secondi-piatti.component.sass']
 })
