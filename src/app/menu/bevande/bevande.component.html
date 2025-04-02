@@ -4,7 +4,8 @@
 </section>
 
 <div class="dish-list">
-    <div class="dish-card" *ngFor="let dish of bevande">
+    <div *ngFor="let dish of bevande" class="dish">
+        <img [src]="dish.image" [alt]="dish.name" class="dish-image">
         <h4>{{ dish.name }}</h4>
         <p class="ingredients">{{ dish.ingredients }}</p>
         <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p>

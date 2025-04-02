@@ -4,10 +4,11 @@
 </section>
 
 <div class="dish-list">
-    <div class="dish-card" *ngFor="let dish of antipasti">
-        <h4>{{ dish.name }}</h4>
-        <p class="ingredients">{{ dish.ingredients }}</p>
-        <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p>
+    <div *ngFor="let dish of antipasti" class="dish">
+        <img [src]="dish.image" [alt]="dish.name" class="dish-image">
+        <h3>{{ dish.name }}</h3>
+        <p>{{ dish.ingredients }}</p>
+        <p>Prezzo: {{ dish.price | currency:'EUR' }}</p>
     </div>
 </div>
 
@@ -17,6 +18,7 @@
 
 <div class="dish-list">
     <div class="dish-card" *ngFor="let dish of contorni">
+        <img *ngIf="dish.image" [src]="dish.image" [alt]="dish.name" class="dish-image">
         <h4>{{ dish.name }}</h4>
         <p class="ingredients">{{ dish.ingredients }}</p>
         <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p>

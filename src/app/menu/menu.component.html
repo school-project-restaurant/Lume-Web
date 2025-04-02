@@ -7,6 +7,7 @@
     <h3>{{ category.name }}</h3>
     <div class="dish-list">
         <div class="dish-card" *ngFor="let dish of category.dishes">
+            <img [src]="dish.image" [alt]="dish.name" class="dish-image">
             <h4>{{ dish.name }}</h4>
             <p class="ingredients">{{ dish.ingredients }}</p>
             <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p>

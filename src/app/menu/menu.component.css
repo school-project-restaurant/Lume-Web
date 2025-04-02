@@ -40,7 +40,10 @@
 }
 .menu-item img {
   width: 100%;
+  max-width: 200px; /* Imposta una larghezza massima */
+  height: auto; /* Mantieni le proporzioni */
   border-radius: 10px;
+  margin: 0 auto; /* Centra l'immagine */
 }
 
 .menu-info {
