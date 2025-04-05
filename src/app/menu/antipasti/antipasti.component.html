@@ -4,7 +4,7 @@
 </section>
 
 <div class="dish-list">
-    <div *ngFor="let dish of antipasti" class="dish">
+    <div *ngFor="let dish of antipasti" class="dish-card">
         <img [src]="dish.image" [alt]="dish.name" class="dish-image">
         <h3>{{ dish.name }}</h3>
         <p>{{ dish.ingredients }}</p>
