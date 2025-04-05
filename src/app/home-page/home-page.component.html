@@ -1,11 +1,12 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <header class="hero">
     <video autoplay muted loop playsinline class="background-video">
         <source src="assets/Home-page-Vid.mp4" type="video/mp4">
         Il tuo browser non supporta il video HTML5.
     </video>
-
     <div class="hero-content">
-        <h1>Lume</h1>
+        <h1 class= "cinzel-decorative-bold">Lume</h1>
         <p class="intro-text">
             "Il tempo si sospende, mentre la luce danza sui cristalli e i sapori si fondono in un'armonia perfetta.
             Un'orchestra silenziosa di gesti eleganti vi accompagna in un'esperienza sensoriale unica, benvenuti
@@ -14,7 +15,45 @@
         <a href="#" class="btn btn-primary">Prenota un Tavolo</a>
     </div>
 </header>
-
+<body>
+    <div class="container">
+        <!-- Section 1 -->
+        <div class="section">
+            <div>
+                <img src="assets/ilristorante.png" alt="ristorante">
+            </div>
+            <div class="section-content">
+                <h1 class= "cinzel-decorative-regular">IL RISTORANTE</h1>
+                <p class= "avenirNextLTPro-regular">
+                    Le sale del Ristorante Lume sono teatro di un'esperienza 
+                    culinaria unica, esaltata da un design raffinato e un 
+                    servizio impeccabile. Ogni dettaglio è curato con 
+                    meticolosa attenzione, per offrire un'esperienza sensoriale 
+                    indimenticabile.
+                </p>
+            </div>
+        </div>
+        <!-- Section 2 -->
+        <div class="section">
+            <div class="section-content">
+                <h1 class= "cinzel-decorative-regular">IL NOSTRO CREDO</h1>
+                <p class= "avenirNextLTPro-regular">
+                    La nostra cucina è un atto di creazione,
+                     un'espressione dell'invisibile. Ogni piatto è 
+                     un'opera d'arte, votata alla bellezza e 
+                     all'armonia. Materie prime d'eccellenza e 
+                     tecniche all'avanguardia si fondono in 
+                     un'esperienza che sfida le convenzioni e apre 
+                     nuove prospettive.
+                    </p>
+            </div>
+            <div>
+                <img src="assets/ilnostrocredo.png">
+            </div>
+        </div>
+    </div>
+</body>
+<!--
 <section class="about">
     <h2>Il nostro credo</h2>
     <p>
@@ -41,6 +80,5 @@
         <img class="menu-item" [src]="preview.image" alt="Antipasto">
         <p>{{ preview.name }}</p>
     </div>
-</div>
-
+</div>-->
 <app-client-footer></app-client-footer>
