@@ -13,7 +13,9 @@
             <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p>
         </div>
     </div>
+  <div class="see-more-container">
     <a [routerLink]="getRouteForCategory(category.name)" class="see-more">Altro</a>
+  </div>
 </section>
 
 <app-client-footer></app-client-footer>
