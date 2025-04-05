@@ -23,9 +23,12 @@ nav .nav-a:hover {
   transform: scale(1.1);
 }
 nav .logo {
-  font-size: 24px;
-  font-weight: bold;
   color: #fff;
+}
+nav .logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 nav .login-btn {
   padding: 5px 10px;

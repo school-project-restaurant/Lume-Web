@@ -1,0 +1,61 @@
+.menu-intro {
+  text-align: center;
+  margin: 2rem 0;
+}
+.menu-intro h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.menu-intro p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.dish-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.dish-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.dish-card {
+  flex: 1 1 calc(30% - 1rem);
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out;
+}
+.dish-card h4 {
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.dish-card .ingredients {
+  font-size: 0.95rem;
+  color: #555;
+}
+.dish-card .price {
+  font-weight: bold;
+  margin-top: 0.8rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .dish-list {
+    flex-direction: column;
+  }
+  .dish-card {
+    flex: 1 1 100%;
+  }
+}
+
+/*# sourceMappingURL=primi-piatti.component.css.map */
