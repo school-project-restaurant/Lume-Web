@@ -1,16 +1,36 @@
+@font-face 
+  font-family: "Avenir Next"
+  src: url('/assets/fonts/Cinzel_Decorative/Avenir Next/AvenirNextLTPro-Bold.otf') format('opentype')
+  font-weight: 700
+  font-style: normal
+
+@font-face 
+  font-family: "Avenir Next"
+  src: url('/assets/fonts/Cinzel_Decorative/Avenir Next/AvenirNextLTPro-Regular.otf') format('opentype')
+  font-weight: 400
+  font-style: normal
+
+@font-face 
+  font-family: "Cinzel Decorative"
+  src: url('/assets/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf') format('truetype')
+  font-style: normal
+
 body
   background-color: #f9f9f9
 
 .menu-intro
+  font-family:"AvenirNextLTPro", serif
   text-align: center
   margin: 2rem 0
 
   h2
+    font-family:"Cinzel Decorative", serif
     font-size: 2rem
     font-weight: bold
     margin-bottom: 0.5rem
 
   p
+    font-family:"Avenir Next", serif
     font-size: 1.1rem
     color: #555
 
@@ -18,14 +38,23 @@ body
   margin: 2rem 0
 
   h3
+    font-family:"Cinzel Decorative", serif
     font-size: 1.5rem
     margin-bottom: 1rem
+    margin-left: 3rem
     color: #333
 
 .dish-list
   display: flex
   flex-wrap: wrap
   gap: 1.5rem
+
+.dish-image
+    width: 100%
+    max-width: 300px
+    height: auto
+    border-radius: 8px
+    margin-bottom: 10px
 
 .dish-card
   flex: 1 1 calc(30% - 1rem)
@@ -34,9 +63,11 @@ body
   border-radius: 20px
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05)
   transition: transform 0.3s ease-in-out
+  font-family:"AvenirNextLTPro", serif
 
   h4
     margin-bottom: 0.3rem
+    font-family:"AvenirNextLTPro", serif
     font-size: 1.1rem
     font-weight: 600
     letter-spacing: 0.5px
@@ -54,8 +85,9 @@ body
   display: block
   text-align: right
   margin-top: 0.5rem
-  color: #a445ed
+  color: black
   font-weight: 600
+  font-family:"AvenirNextLTPro", serif
 
 @media (max-width: 768px)
   .dish-list

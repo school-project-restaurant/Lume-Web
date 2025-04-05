@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; // ⬅️ IMPORTA QUESTO
-import { FormsModule } from '@angular/forms'; // ⬅️ IMPORTA QUESTO
+import { FormsModule } from '@angular/forms';
+import {ClientFooterComponent} from '../shared/client-footer/client-footer.component'; // ⬅️ IMPORTA QUESTO
 
 @Component({
   selector: 'app-login',
   standalone: true, // ⬅️ IMPORTANTE
-  imports: [CommonModule, FormsModule], // ⬅️ AGGIUNGI CommonModule
+  imports: [CommonModule, FormsModule, ClientFooterComponent], // ⬅️ AGGIUNGI CommonModule
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.sass']
 })

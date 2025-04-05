@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SecondiPiattiComponent } from './secondi-piatti.component';
+import { SecondiComponent } from './secondi-piatti.component';
 
 describe('SecondiPiattiComponent', () => {
-  let component: SecondiPiattiComponent;
-  let fixture: ComponentFixture<SecondiPiattiComponent>;
+  let component: SecondiComponent;
+  let fixture: ComponentFixture<SecondiComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SecondiPiattiComponent]
+      imports: [SecondiComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SecondiPiattiComponent);
+    fixture = TestBed.createComponent(SecondiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

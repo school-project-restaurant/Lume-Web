@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import {ClientFooterComponent} from '../shared/client-footer/client-footer.component';
 
 @Component({
   selector: 'app-reservations',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ClientFooterComponent],
   templateUrl: './reservations.component.html',
   styleUrls: ['./reservations.component.sass']
 })

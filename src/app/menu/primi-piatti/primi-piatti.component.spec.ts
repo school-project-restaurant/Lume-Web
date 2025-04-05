@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrimiPiattiComponent } from './primi-piatti.component';
+import { PrimiComponent } from './primi-piatti.component';
 
 describe('PrimiPiattiComponent', () => {
-  let component: PrimiPiattiComponent;
-  let fixture: ComponentFixture<PrimiPiattiComponent>;
+  let component: PrimiComponent;
+  let fixture: ComponentFixture<PrimiComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PrimiPiattiComponent]
+      imports: [PrimiComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PrimiPiattiComponent);
+    fixture = TestBed.createComponent(PrimiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

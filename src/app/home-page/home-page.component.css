@@ -16,7 +16,141 @@
   border-radius: 10px;
 }
 
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url('/assets/fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url('/assets/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url('/assets/fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf') format('truetype');
+  font-style: normal;
+}
+
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-bold {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.cinzel-decorative-black {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url('/assets/fonts/Cinzel_Decorative/Avenir Next/AvenirNextLTPro-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url('/assets/fonts/Cinzel_Decorative/Avenir Next/AvenirNextLTPro-It.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url('/assets/fonts/Cinzel_Decorative/Avenir Next/AvenirNextLTPro-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.avenirNextLTPro-bold {
+  font-family: "Avenir Next", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.avenirNextLTPro-it {
+  font-family: "Avenir Next", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.avenirNextLTPro-regular {
+  font-family: "Avenir Next", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: white;
+  color: black;
+  margin: 100px;
+  padding: 0;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.section img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+.section-content {
+  flex: 1;
+  padding: 20px;
+}
+.section-content h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.section-content p {
+  margin-bottom: 20px;
+}
+.section-content button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .section {
+      flex-direction: column;
+  }
+  .section-content {
+      padding: 0;
+  }
+}
+
+
+
 .about, .gallery, .cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
   text-align: center;
   padding: 3rem 1rem;
 }
@@ -25,9 +159,13 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex: 1;
+  padding: 20px;
 }
 .grid img {
-  width: 300px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
   border-radius: 10px;
 }
 
