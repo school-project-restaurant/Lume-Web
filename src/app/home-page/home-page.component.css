@@ -111,12 +111,12 @@ body {
 }
 .section img {
   width: 100%;
-  max-width: 800px;
+  max-width: 500px;
   height: auto;
 }
 .section-content {
   flex: 1;
-  padding: 20px;
+  padding: 10px;
 }
 .section-content h1 {
   font-size: 2em;
