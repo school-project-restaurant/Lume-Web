@@ -1,86 +1,142 @@
 @font-face {
   font-family: "Avenir Next";
-  src: url('/assets/fonts/Cinzel_Decorative/Avenir Next/AvenirNextLTPro-Bold.otf') format('opentype');
+  src: url("/assets/fonts/Cinzel_Decorative/Avenir Next/AvenirNextLTPro-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url('/assets/fonts/Cinzel_Decorative/Avenir Next/AvenirNextLTPro-Regular.otf') format('opentype');
+  src: url("/assets/fonts/Cinzel_Decorative/Avenir Next/AvenirNextLTPro-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Cinzel Decorative";
-  src: url('/assets/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf') format('truetype');
+  src: url("/assets/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf") format("truetype");
   font-style: normal;
 }
-.menu-container {
+body {
+  background-color: #f9f9f9;
+}
+
+.menu-intro {
+  font-family: "AvenirNextLTPro", serif;
   text-align: center;
-  padding: 2rem;
-  background: #1c1c1c;
-  color: white;
+  margin: 2rem 0;
 }
-.menu-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-family:"AvenirNextLTPro", serif;
-}
-
-.menu-category {
-  margin-bottom: 3rem;
-}
-.menu-category h2 {
+.menu-intro h2 {
+  font-family: "Cinzel Decorative", serif;
   font-size: 2rem;
-  font-family:"AvenirNextLTPro", serif;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #ff5733;
-  display: inline-block;
-  padding-bottom: 5px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.menu-intro p {
+  font-family: "Avenir Next", serif;
+  font-size: 1.1rem;
+  color: #555;
 }
 
-.menu-items {
+.container .section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+}
+.container .section-content img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.category {
+  margin: 2rem 0;
+}
+.category h3 {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+  color: #333;
+}
+.category h4 {
+  font-family: "Cinzel Decorative", serif;
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.category p {
+  font-family: "Avenir Next", serif;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.dish-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
-.menu-item {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1rem;
-  border-radius: 10px;
-  width: 250px;
-  text-align: center;
-  transition: transform 0.3s;
-}
-.menu-item:hover {
-  transform: scale(1.05);
-}
-.menu-item img {
+.dish-image {
   width: 100%;
-  max-width: 200px; /* Imposta una larghezza massima */
-  height: auto; /* Mantieni le proporzioni */
-  border-radius: 10px;
-  margin: 0 auto; /* Centra l'immagine */
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-.menu-info {
-  margin-top: 1rem;
+.dish-card {
+  flex: 1 1 calc(30% - 1rem);
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out;
+  font-family: "AvenirNextLTPro", serif;
 }
-.menu-info h3 {
-  font-family:"AvenirNextLTPro", serif;
-  font-size: 1.4rem;
-  margin-bottom: 5px;
+.dish-card .ingredients {
+  font-size: 0.95rem;
+  color: #555;
 }
-.menu-info p {
-  font-family:"AvenirNextLTPro", serif;
-  font-size: 1rem;
-  color: #ccc;
-}
-.menu-info .prezzo {
-  font-family:"AvenirNextLTPro", serif;
-  font-size: 1.2rem;
+.dish-card .price {
   font-weight: bold;
-  color: #ff5733;
-}/*# sourceMappingURL=menu.component.css.map */
+  margin-top: 0.8rem;
+  font-size: 1rem;
+}
+
+.see-more-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+  padding: 0 1rem;
+}
+
+.see-more {
+  display: inline-block;
+  padding: 0.3rem 1.2rem;
+  font-size: 17px;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+  font-family: "Avenir Next", serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.see-more:hover {
+  background-color: #d4af37;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .dish-list {
+    flex-direction: column;
+  }
+  .dish-card {
+    flex: 1 1 100%;
+  }
+}
+
+/*# sourceMappingURL=menu.component.css.map */
