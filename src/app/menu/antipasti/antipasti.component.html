@@ -8,7 +8,7 @@
         <img [src]="dish.image" [alt]="dish.name" class="dish-image">
         <h3>{{ dish.name }}</h3>
         <p>{{ dish.ingredients }}</p>
-        <p>Prezzo: {{ dish.price | currency:'EUR' }}</p>
+        <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p>
     </div>
 </div>
 
