@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {ClientFooterComponent} from '../shared/client-footer/client-footer.component';
+import {RouterLink} from '@angular/router';
 
 interface Preview {
   name: string;
@@ -10,7 +11,7 @@ interface Preview {
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CommonModule, ClientFooterComponent],
+  imports: [CommonModule, ClientFooterComponent, NgOptimizedImage, RouterLink],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.sass']
 })
