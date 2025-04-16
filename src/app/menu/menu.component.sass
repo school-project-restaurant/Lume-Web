@@ -19,18 +19,18 @@ body
   background-color: #f9f9f9
 
 .menu-intro
-  font-family:"AvenirNextLTPro", serif
+  font-family: "AvenirNextLTPro", serif
   text-align: center
   margin: 2rem 0
 
   h2
-    font-family:"Cinzel Decorative", serif
+    font-family: "Cinzel Decorative", serif
     font-size: 2rem
     font-weight: bold
     margin-bottom: 0.5rem
 
   p
-    font-family:"Avenir Next", serif
+    font-family: "Avenir Next", serif
     font-size: 1.1rem
     color: #555
 
@@ -50,19 +50,19 @@ body
 .category
   margin: 2rem 0
   h3
-    font-family:"Cinzel Decorative", serif
+    font-family: "Cinzel Decorative", serif
     font-size: 1.5rem
     margin-bottom: 1rem
     margin-left: 3rem
     color: #333
   h4
-    font-family:"Cinzel Decorative", serif
+    font-family: "Cinzel Decorative", serif
     margin-bottom: 0.3rem
     font-size: 1.1rem
     font-weight: 600
     letter-spacing: 0.5px
   p
-    font-family:"Avenir Next", serif
+    font-family: "Avenir Next", serif
     font-size: 1.1rem
     color: #555
 
@@ -85,7 +85,7 @@ body
   border-radius: 20px
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05)
   transition: transform 0.3s ease-in-out
-  font-family:"AvenirNextLTPro", serif
+  font-family: "AvenirNextLTPro", serif
 
   .ingredients
     font-size: 0.95rem
@@ -96,14 +96,28 @@ body
     margin-top: 0.8rem
     font-size: 1rem
 
-.see-more
-  display: block
-  text-align: right
+.see-more-container
+  display: flex
+  justify-content: flex-end
   margin-top: 0.5rem
-  color: black
-  font-weight: 600
-  font-size: 1.2rem
-  font-family:"Avenir Next", serif
+  padding: 0 1rem
+
+.see-more
+  display: inline-block
+  padding: 0.3rem 1.2rem
+  font-size: 17px
+  color: white
+  background-color: black
+  border-radius: 20px
+  font-family: "Avenir Next", serif
+  text-decoration: none
+  cursor: pointer
+  transition: background-color 0.2s ease, color 0.2s ease
+
+  &:hover
+    background-color: #d4af37
+    color: white
+
 
 @media (max-width: 768px)
   .dish-list
