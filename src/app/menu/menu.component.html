@@ -1,21 +1,29 @@
+<!-- Sezione introduttiva del menù, con titolo e descrizione -->
 <section class="menu-intro">
-    <h2>Scopri i nostri piatti</h2>
-    <p>Piatti autentici preparati con ingredienti freschi e selezionati</p>
+  <h2>Scopri i nostri piatti</h2>
+  <p>Piatti autentici preparati con ingredienti freschi e selezionati</p>
 </section>
 
+<!-- Ciclo sulle categorie del menù (es. Antipasti, Primi...) -->
 <section *ngFor="let category of menuCategories" class="category">
-    <h3>{{ category.name }}</h3>
-    <div class="dish-list">
-        <div class="dish-card" *ngFor="let dish of category.dishes">
-            <img [src]="dish.image" [alt]="dish.name" class="dish-image">
-            <h4>{{ dish.name }}</h4>
-            <p class="ingredients">{{ dish.ingredients }}</p>
-            <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p>
-        </div>
+  <h3>{{ category.name }}</h3> <!-- Titolo della categoria -->
+
+  <!-- Lista dei piatti per la categoria corrente -->
+  <div class="dish-list">
+    <!-- Card del piatto -->
+    <div class="dish-card" *ngFor="let dish of category.dishes">
+      <img [src]="dish.image" [alt]="dish.name" class="dish-image"> <!-- Immagine del piatto -->
+      <h4>{{ dish.name }}</h4> <!-- Nome del piatto -->
+      <p class="ingredients">{{ dish.ingredients }}</p> <!-- Ingredienti -->
+      <p class="price">{{ dish.price | currency:'EUR':'symbol' }}</p> <!-- Prezzo formattato in euro -->
     </div>
+  </div>
+
+  <!-- Link per vedere altri piatti della categoria -->
   <div class="see-more-container">
     <a [routerLink]="getRouteForCategory(category.name)" class="see-more">Altro</a>
   </div>
 </section>
 
+<!-- Footer del sito, componente riutilizzabile -->
 <app-client-footer></app-client-footer>

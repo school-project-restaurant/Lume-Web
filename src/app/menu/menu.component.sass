@@ -1,23 +1,23 @@
+// 📦 Definizione dei font personalizzati
 @font-face
   font-family: "Avenir Next"
   src: url('/assets/fonts/Cinzel_Decorative/Avenir Next/AvenirNextLTPro-Bold.otf') format('opentype')
   font-weight: 700
-  font-style: normal
 
 @font-face
   font-family: "Avenir Next"
   src: url('/assets/fonts/Cinzel_Decorative/Avenir Next/AvenirNextLTPro-Regular.otf') format('opentype')
   font-weight: 400
-  font-style: normal
 
 @font-face
   font-family: "Cinzel Decorative"
   src: url('/assets/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf') format('truetype')
-  font-style: normal
 
+// 🌍 Stile base della pagina
 body
   background-color: #f9f9f9
 
+// 🧾 Sezione introduttiva (testo sopra le categorie)
 .menu-intro
   font-family: "AvenirNextLTPro", serif
   text-align: center
@@ -34,6 +34,7 @@ body
     font-size: 1.1rem
     color: #555
 
+// 🧱 Layout per eventuale sezione centrale con immagini
 .container
   .section-content
     display: flex
@@ -42,42 +43,50 @@ body
     justify-content: center
     padding: 2rem
     width: 100%
+
     img
       width: 100%
       max-width: 600px
       height: auto
 
+// 🍽️ Sezione per ogni categoria di piatti
 .category
   margin: 2rem 0
+
   h3
     font-family: "Cinzel Decorative", serif
     font-size: 1.5rem
     margin-bottom: 1rem
     margin-left: 3rem
     color: #333
+
   h4
     font-family: "Cinzel Decorative", serif
     margin-bottom: 0.3rem
     font-size: 1.1rem
     font-weight: 600
     letter-spacing: 0.5px
+
   p
     font-family: "Avenir Next", serif
     font-size: 1.1rem
     color: #555
 
+// 📋 Contenitore di card dei piatti
 .dish-list
   display: flex
   flex-wrap: wrap
   gap: 1.5rem
 
+// 🖼️ Immagine del piatto nella card
 .dish-image
-    width: 100%
-    max-width: 300px
-    height: auto
-    border-radius: 8px
-    margin-bottom: 10px
+  width: 100%
+  max-width: 300px
+  height: auto
+  border-radius: 8px
+  margin-bottom: 10px
 
+// 🃏 Card del piatto
 .dish-card
   flex: 1 1 calc(30% - 1rem)
   padding: 1.5rem
@@ -96,6 +105,7 @@ body
     margin-top: 0.8rem
     font-size: 1rem
 
+// 🔗 Bottone "Altro"
 .see-more-container
   display: flex
   justify-content: flex-end
@@ -118,7 +128,7 @@ body
     background-color: #d4af37
     color: white
 
-
+// 📱 Responsive per mobile
 @media (max-width: 768px)
   .dish-list
     flex-direction: column
